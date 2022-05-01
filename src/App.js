@@ -6,10 +6,10 @@ class App extends React.Component {
   render() {
     return (
       <header>
-      <form id="todolist">
-      <input type="text" placeholder="Enter Subject"/>
-            <input type="submit" value="Add"/>
-      </form>
+        <form id="todoform">
+          <input type="text" placeholder="Enter Subject" />
+          <input type="submit" value="Add" />
+        </form>
       </header>
     );
   }
