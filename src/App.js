@@ -12,7 +12,8 @@ class App extends React.Component {
         key: "",
       }
     }
-    this.handleInput = this.handleInput.bind(this)
+    this.handleInput = this.handleInput.bind(this);
+    this.addItem = this.addItem.bind(this);
   }
   handleInput(e){
     this.setState({
@@ -26,10 +27,11 @@ class App extends React.Component {
     e.preventDefault();
     const newItem = this.state.currentItem;
     console.log(newItem);
+    this.form.clear();
   }
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <header>
           <form id="todoform" onSubmit={this.addItem}>
             <input

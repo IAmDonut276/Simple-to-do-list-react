@@ -18,6 +18,7 @@ body{
 }
 
 #todoform input[type="submit"]{
+  margin-left: 40px;
   height: 35px;
   width: 20%;
   border-radius:10px;
