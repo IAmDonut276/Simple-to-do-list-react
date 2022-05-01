@@ -1,8 +1,11 @@
 body{
-  
+  background-color:#ADD8E6;
 }
 
-.App {
-  text-align: center;
+.App{
+  background-color: #045F5F;
+  min-height:500px;
+  width: 80%;
+  margin: 40px auto;
 }
 
