@@ -9,3 +9,20 @@ body{
   margin: 40px auto;
 }
 
+#todoform input[type="text"]{
+  margin: 40px;
+  height: 30px;
+  width: 50%;
+  border-radius:10px;
+  font-size:18px;
+}
+
+#todoform input[type="submit"]{
+  height: 35px;
+  width: 20%;
+  border-radius:10px;
+  font-size:18px;
+  cursor: pointer;
+  background-color:#FFDEAD;
+}
+
