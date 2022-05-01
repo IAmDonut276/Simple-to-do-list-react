@@ -7,10 +7,22 @@ function ListItems(props) {
     return (
       <div className="list" key={item.key}>
         <p>
-          {" "}
-          {item.text}
-          <input className="b-del" type="button" value="Delete"
-            onClick={()=> props.deleteItem(item.key)}/>
+          <input
+            className="listtext"
+            type="text"
+            id={item.key}
+            value={item.text}
+            onChange={(e) => {
+              props.setUpdate(e.target.value, item.key);
+            }}
+          />
+
+          <input
+            className="b-del"
+            type="button"
+            value="Delete"
+            onClick={() => props.deleteItem(item.key)}
+          />
         </p>
       </div>
     );
