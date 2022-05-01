@@ -10,24 +10,33 @@ class App extends React.Component {
       currentItem: {
         text: "",
         key: "",
-      }
-    }
+      },
+    };
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
   }
-  handleInput(e){
+  handleInput(e) {
     this.setState({
-      currentItem:{
+      currentItem: {
         text: e.target.value,
-        key:Date.now()
-      }
-    })
+        key: Date.now(),
+      },
+    });
   }
-  addItem(e){
+  addItem(e) {
     e.preventDefault();
     const newItem = this.state.currentItem;
     console.log(newItem);
-    this.form.clear();
+    if (newItem.text !== "") {
+      const newItems = [...this.state.items, newItems];
+      this.setState({
+        items: newItems,
+        currentItem: {
+          text: "",
+          key: "",
+        },
+      });
+    }
   }
   render() {
     return (
